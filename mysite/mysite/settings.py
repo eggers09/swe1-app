@@ -27,6 +27,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     'mysite-dev22.us-east-1.elasticbeanstalk.com',
+    'mysite-dev22.us-east-1.elasticbeanstalk.com/polls',
+    'mysite-dev22.us-east-1.elasticbeanstalk.com/results',
 ]
 
 
