@@ -27,6 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     'mysite-dev22.us-east-1.elasticbeanstalk.com',
+    'http://127.0.0.1/'
 ]
 
 
