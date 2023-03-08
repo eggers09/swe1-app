@@ -4,7 +4,7 @@ deploy:
     secure: $AWS_ACCESS_KEY
   secret_access_key:
     secure: $AWS_SECRET_KEY
-  region: "us-west-1"
+  region: "us-west-2"
   app: "swe-app-danny"
   env: "swe-app-danny-env"
   bucket_name: "elasticbeanstalk-us-west-2-785113150581"
