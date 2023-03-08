@@ -8,7 +8,8 @@ deploy:
   app: "swe-app-danny"
   env: "swe-app-danny-env"
   bucket_name: "elasticbeanstalk-us-west-2-785113150581"
-
+  on:
+    branch: main
 
 language: python
 python:
