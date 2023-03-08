@@ -1,0 +1,28 @@
+deploy:
+  provider: elasticbeanstalk
+  access_key_id:
+    secure: $AWS_ACCESS_KEY
+  secret_access_key:
+    secure: $AWS_SECRET_KEY
+  region: "us-west-1"
+  app: "swe-app-danny"
+  env: "swe-app-danny-env"
+  bucket_name: "elasticbeanstalk-us-west-2-785113150581"
+
+
+language: python
+python:
+  - "3.7" # replace with your desired Python version
+
+# Command to install dependencies
+install:
+  - pip install -r requirements.txt
+
+# Commands to run tests
+before_script:
+  - python manage.py migrate --noinput
+script:
+  - python manage.py test
+
+after_script:
+  - coveralls
