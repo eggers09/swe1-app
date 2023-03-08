@@ -20,9 +20,12 @@ install:
 
 # Commands to run tests
 before_script:
-  - python manage.py migrate --noinput
+  - python manage.py migrate
+  - python manage.py collectstatic --noinput
 script:
-  - python manage.py test
+  - black --check .
+  - flake8 .
+  - coverage run --source=mysite_swe1_app,polls manage.py test
 
 after_script:
   - coveralls
